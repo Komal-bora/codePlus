@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/codeIDE";
+const uri = process.env.MONGODB_URI;
 
 const connectDB = async () => {
   try {
