@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
-uri = "mongodb+srv://komalbora845:3BQumEfRRQrduPIK@cluster0.5nbi4yn.mongodb.net/";
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/myapp";
 
 const connectDB = async () => {
   try {
